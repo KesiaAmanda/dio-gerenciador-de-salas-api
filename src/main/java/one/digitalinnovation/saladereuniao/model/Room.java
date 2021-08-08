@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name="meetingroom")
@@ -25,8 +25,8 @@ public class Room {
     private LocalDate date;
 
     @Column(name = "startHour", nullable = false)
-    private LocalDateTime startHour;
+    private LocalTime startHour;
 
     @Column(name = "endHour", nullable = false)
-    private LocalDateTime endHour;
+    private LocalTime endHour;
 }

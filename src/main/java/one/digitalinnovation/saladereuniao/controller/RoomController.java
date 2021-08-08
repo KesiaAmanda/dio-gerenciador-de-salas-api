@@ -42,8 +42,8 @@ public class RoomController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Room> updateRoom(@PathVariable Long id,
-                                           @Valid @RequestBody Room newRoom) throws ResourceNotFoundException{
-        Room room = verifyIfExists(id);
+                                           @Valid @RequestBody Room room) throws ResourceNotFoundException{
+        verifyIfExists(id);
         room.setId(id);
         return ResponseEntity.ok().body(roomService.updateRoom(room));
     }
@@ -59,9 +59,8 @@ public class RoomController {
     }
 
     private Room verifyIfExists(Long id) throws ResourceNotFoundException{
-        Room room = roomService.getRoomById(id)
+        return roomService.getRoomById(id)
                 .orElseThrow( () -> new ResourceNotFoundException("Room not found: "+ id));
-        return room;
     }
 
 }

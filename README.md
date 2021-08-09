@@ -9,7 +9,7 @@
 - Maven
 
 ## Front-end
-[SPA escrita em Angular.](https://github.com/KesiaAmanda/dio-gerenciador-de-salas-frontend).
+[SPA escrita em Angular.](https://github.com/KesiaAmanda/dio-gerenciador-de-salas-frontend)
 
 ## Endpoints criados na API
 
